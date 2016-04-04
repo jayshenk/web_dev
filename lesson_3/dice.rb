@@ -18,6 +18,7 @@ loop do
 
   request_line = client.gets
   next if request_line =~ /favicon/
+  next unless request_line
   puts request_line
 
   http_method, path, params = parse_request(request_line)
