@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<body>
+  <ul>
+    <% @files.each do |file| %>
+      <li>
+        <a href="<%= file %>"><%= file %></a>
+      </li>
+    <% end %>
+  </ul>
+  <% if @order == 'desc' %>
+    <a href="/">Sort ascending</a>
+  <% else %>
+    <a href="/?order=desc">Sort descending</a>
+  <% end %>
+</body>
+</html>
