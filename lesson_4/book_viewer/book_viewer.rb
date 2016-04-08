@@ -6,6 +6,14 @@ before do
   @contents = File.readlines("data/toc.txt")
 end
 
+helpers do
+  def in_paragraphs(text)
+    text.split("\n\n").map do |line|
+      "<p>#{line}</p>"
+    end.join
+  end
+end
+
 get "/" do
   @title = "The Adventures of Sherlock Holmes"
 
