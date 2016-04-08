@@ -14,6 +14,10 @@ helpers do
   end
 end
 
+not_found do
+  redirect "/"
+end
+
 get "/" do
   @title = "The Adventures of Sherlock Holmes"
 
