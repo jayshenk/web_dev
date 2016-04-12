@@ -1,0 +1,12 @@
+<h1><%= params[:name] %></h1>
+
+<h2>Email: <%= @user[:email] %></h2>
+
+<h3>Interests: <%= @user[:interests].join(', ') %></h3>
+
+<h4>Other Users:</h4>
+<ul>
+<% @other_names.each do |name| %>
+  <li><a href="/users/<%= name %>"><%= name %></a></li>
+<% end %>
+</ul>
